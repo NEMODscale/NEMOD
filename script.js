@@ -8,7 +8,7 @@ toggle.addEventListener("click", () => {
     const itemCount = links.length;
     const radius = 100;
     const startAngle = 200
-    const spreadAngle = 140;
+    const spreadAngle = 120;
 
     if (toggle.classList.contains("open")) {
         links.forEach((li, i) => {
