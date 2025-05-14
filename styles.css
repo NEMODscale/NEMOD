@@ -62,20 +62,28 @@ body::before {
     50% { transform: translateY(-10px); }
 }
 
+/* Navbar Styles */
 .navbar {
-    position: relative;
-    background-color: #d0f0ff;
+    position: fixed; /* Makes it stick */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(208, 240, 255, 0.9); /* Sims blue w/ transparency */
+    backdrop-filter: blur(5px);
     padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
 
 .navbar ul {
     display: flex;
     gap: 40px;
     list-style: none;
+    padding: 0;
+    margin: 0;
     position: relative;
 }
 
@@ -83,14 +91,19 @@ body::before {
     font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     color: #027b39;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 1;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    transition: color 0.2s ease;
 }
 
+.navbar a:hover {
+    color: #1ea049;
+}
+
+/* Plumbob stays above the hovered nav item */
 .plumbob {
     position: absolute;
-    top: 0;
+    top: -55px; /* Raise it above nav */
     width: 30px;
     height: 45px;
     background: linear-gradient(to bottom, #42f572, #1ea049);
@@ -99,4 +112,8 @@ body::before {
     transform: translateX(-50%);
     z-index: 0;
 }
+body {
+    padding-top: 100px;
+}
+
 
