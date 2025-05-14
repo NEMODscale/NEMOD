@@ -107,8 +107,9 @@ footer {
 
 .action-wheel {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 50%;
+    transform: translateX(-50%);
     list-style: none;
     padding: 0;
     margin: 0;
