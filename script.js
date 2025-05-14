@@ -8,11 +8,11 @@ toggle.addEventListener("click", () => {
     const itemCount = links.length;
     const radius = 100;
     const arcSpan = 180;
-    const centerAngle = 90;
+    const startAngle = 270 - arcSpan / 2;
 
     if (toggle.classList.contains("open")) {
         links.forEach((li, i) => {
-            const angle = centerAngle - (arcSpan / 2) + (i * arcSpan) / (itemCount - 1);
+            const angle = startAngle + (arcSpan * i) / (itemCount - 1);
             const radians = angle * (Math.PI / 180);
             const x = radius * Math.cos(radians);
             const y = radius * Math.sin(radians);
@@ -24,4 +24,3 @@ toggle.addEventListener("click", () => {
         });
     }
 });
-
