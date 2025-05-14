@@ -7,78 +7,12 @@
     <title>NEMOD</title>
 </head>
 <body>
-    <header>
-        <h1>NEMOD</h1>
-        <h2>NEMOD scale will tell you if the economy is falling</h2>
-    </header>
-    <main>
-        <section id="nemod-scale">
-            <h3 id="datetime"></h3>
-            <p id="market-status" class="market-open"></p>
-            <div class="flourish-embed flourish-gauge" data-src="visualisation/22488572"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22488572/thumbnail" width="100%" alt="gauge visualization" /></noscript></div>
-        </section>
-        <section id="news">
-            <h3>Latest News</h3>
-            <h2>China imposes 125% tariff on US, says it won't go higher. "</h2>
-            <p>
-                China has imposed its last tariff on the US, now a 125% one, but also says it wont increase it any further, claiming "it will no longer make economic sense, and will become a joke in the history of world economics."
-                We will have to wait until monday to see what this new tariff means for the S&P
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 NEMOD. All rights reserved.</p>
-    
-        <script>
-            function updateDateTime() {
-                const now = new Date();
-                const formatted = now.toLocaleString();
-                document.getElementById('datetime').textContent = 'NEMOD scale as of: ' + formatted;
-            }
-        
-            function updateMarketStatus() {
-                const now = new Date();
-    
-                const nyNow = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
-                const day = nyNow.getDay();
-                const hours = nyNow.getHours();
-                const minutes = nyNow.getMinutes();
-        
-                const marketStatus = document.getElementById('market-status');
-        
-                const isWeekday = day >= 1 && day <= 5;
-                const isOpen = isWeekday && (hours > 9 || (hours === 9 && minutes >= 30)) && (hours < 16);
-        
-                if (isOpen) {
-                    marketStatus.textContent = "The market is currently open.";
-                    marketStatus.style.color = "limegreen";
-                } else {
-                    let nextOpen = new Date(nyNow);
-                    if (day === 6 || (day === 5 && (hours >= 16))) {
-                        nextOpen.setDate(nyNow.getDate() + ((8 - day) % 7));
-                    } else if (day === 0 || (hours >= 16)) { 
-                        nextOpen.setDate(nyNow.getDate() + 1);
-                    }
-        
-                    nextOpen.setHours(9, 30, 0, 0);
-        
-                    const msUntilOpen = nextOpen - nyNow;
-                    const hoursLeft = Math.floor(msUntilOpen / (1000 * 60 * 60));
-                    const minutesLeft = Math.floor((msUntilOpen % (1000 * 60 * 60)) / (1000 * 60));
-        
-                    marketStatus.textContent = `The market is closed, but will open again in ${hoursLeft}h ${minutesLeft}m.`;
-                    marketStatus.style.color = "crimson";
-                }
-            }
-        
-            function updateAll() {
-                updateDateTime();
-                updateMarketStatus();
-            }
-        
-            updateAll();
-            setInterval(updateAll, 60000);
-        </script>
-        
+    <h1>
+        Sul Sul, this page is currently under construction
+    </h1>
+    <h2>Come back later <3</h2>
+<footer>
+    <p>&copy; 2025 NEMOD. All rights reserved.</p>
+ </footer>
 </body>
 </html>
