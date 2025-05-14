@@ -5,15 +5,16 @@ const links = wheel.querySelectorAll("li");
 toggle.addEventListener("click", () => {
     toggle.classList.toggle("open");
 
+    const itemCount = links.length;
+    const radius = 100;
+    const startAngle = -90; // Start pointing straight up
+
     if (toggle.classList.contains("open")) {
-        const radius = 100;
-        const angleStep = (2 * Math.PI) / links.length;
-
         links.forEach((li, i) => {
-            const angle = i * angleStep - Math.PI / 2;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-
+            const angle = startAngle + (i * 360) / itemCount;
+            const radians = angle * (Math.PI / 180);
+            const x = radius * Math.cos(radians);
+            const y = radius * Math.sin(radians);
             li.style.transform = `translate(${x}px, ${y}px)`;
         });
     } else {
