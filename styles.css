@@ -53,13 +53,6 @@ body::before {
     height: 60px;
     margin: 0 auto 30px auto;
     background: linear-gradient(to bottom, #42f572, #1ea049);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    animation: floaty 2s infinite ease-in-out;
-}
-
-@keyframes floaty {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
 }
 
 .navbar {
