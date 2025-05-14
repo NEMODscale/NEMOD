@@ -40,15 +40,6 @@ footer {
     width: 100%;
 }
 
-body::before {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 60px;
-    margin: 0 auto 30px auto;
-    background: linear-gradient(to bottom, #42f572, #1ea049);
-}
-
 .navbar {
     position: fixed;
     top: 0;
