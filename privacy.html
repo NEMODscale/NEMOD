@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; line-height: 1.6; }
+    h1 { font-size: 1.8rem; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p>This Pinterest automation tool does not collect, store, or share any personal data from users.</p>
+  
+  <h2>What This Tool Does</h2>
+  <ul>
+    <li>Takes an Amazon product URL provided by the user.</li>
+    <li>Scrapes public product info (title and image).</li>
+    <li>Uses the Pinterest API to publish a Pin with the user’s own account credentials.</li>
+  </ul>
+
+  <h2>Data Usage</h2>
+  <p>
+    All actions are performed in real-time and temporarily in memory. No information is stored or logged permanently.
+    The only API keys involved are the ones the user manually provides and stores locally in environment variables.
+  </p>
+
+  <h2>Third-Party APIs</h2>
+  <p>
+    This tool uses:
+    <ul>
+      <li><strong>Amazon:</strong> for public product data (non-authenticated)</li>
+      <li><strong>OpenAI:</strong> for generating pin descriptions (title + text only)</li>
+      <li><strong>Pinterest:</strong> for publishing pins using your token</li>
+    </ul>
+  </p>
+
+  <h2>Contact</h2>
+  <p>If you have any concerns or questions, contact the developer at: <code>youremail@example.com</code></p>
+</body>
+</html>
