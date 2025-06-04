@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon → Pinterest</title>
+</head>
+<body style="background:#111; color:#eee; font-family:sans-serif;">
+    <h2>📌 Amazon → Pinterest</h2>
+    <form method="POST">
+        Amazon URL:<br>
+        <input type="text" name="amazon_url" style="width:400px;"><br><br>
+        Image URL (optional):<br>
+        <input type="text" name="image_url" style="width:400px;"><br><br>
+        <button type="submit">Create Pinterest Post</button>
+    </form>
+    {% if result %}
+    <h3>Generated Pin:</h3>
+    <p><b>Title:</b> {{ result.title }}</p>
+    <p><b>Description:</b> {{ result.description }}</p>
+    <p><b>Link:</b> <a href="{{ result.link }}" target="_blank">{{ result.link }}</a></p>
+    <img src="{{ result.image_url }}" style="max-width:300px;">
+    {% endif %}
+</body>
+</html>
